@@ -7,12 +7,18 @@
     font-family: "playfair display",sans-serif ;
 }
 
-body{
-    display: flex;
+body {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;  /* Adds 2rem space between the divs */
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: rgba(254,7,73);
+}
+
+.logo {
+    margin-right: 2rem;  /* Adds space between logo and card */
 }
 
 .card
@@ -137,6 +143,13 @@ body{
 
 /* Add these media queries at the end of your CSS file */
 @media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .logo {
+        margin-right: 0;
+        margin-bottom: 2rem;  /* Adds vertical space when stacked */
+    }
     .card, .logo {
         width: 250px;
         height: 380px;
