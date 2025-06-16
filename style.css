@@ -135,4 +135,45 @@ body{
     transform: translate3d(0, -20px, 200px);
 }
 
+/* Add these media queries at the end of your CSS file */
+@media screen and (max-width: 768px) {
+    .card, .logo {
+        width: 250px;
+        height: 380px;
+        padding: 0 20px;
+    }
+
+    body {
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card, .logo {
+        width: 200px;
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .card:hover .character,
+    .logo:hover .character1 {
+        transform: translate3d(0, -10px, 100px);
+    }
+
+    .card:hover .wrapper,
+    .logo:hover .wrap {
+        transform: perspective(600px) rotateX(15deg) translateZ(0);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card, .logo {
+        width: 180px;
+        height: 270px;
+        padding: 0 10px;
+    }
+}
+
 
